@@ -37,8 +37,8 @@ question"""+str(questionindex)+"""text = %q{
 }
 
 question"""+str(questionindex)+""" = Question.create(
-    question_title: "question"""+str(questionindex)+"""",
-    question: question"""+str(questionindex)+"""text,
+    title: "question"""+str(questionindex)+"""",
+    body: question"""+str(questionindex)+"""text,
     render: 'mathjax'
 )
 """
