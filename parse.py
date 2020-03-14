@@ -39,7 +39,7 @@ question"""+str(questionindex)+"""text = %q{
 question"""+str(questionindex)+""" = Question.create(
     question_title: "question"""+str(questionindex)+"""",
     question: question"""+str(questionindex)+"""text,
-    has_mathjax: true
+    render: 'mathjax'
 )
 """
       myfile.write(thisQ)
@@ -51,11 +51,11 @@ question"""+str(questionindex)+""" = Question.create(
           answer = """
 answer"""+str(questionindex)+str(answerindex)+""" = Answer.create(
   answer: %q{"""+answerList[x]+"""},
-  has_mathjax: true
+  render: 'mathjax'
 )
 
 QuestionAnswer.create(
-    correct_answer: false,
+    correct: false,
     answer_id: answer"""+str(questionindex)+str(answerindex)+""".id,
     question_id: question"""+str(questionindex)+""".id
 )
@@ -65,7 +65,7 @@ QuestionAnswer.create(
 
       quizjoin = """
 QuizQuestion.create(
-    order_index: """+str(questionindex)+""",
+    index: """+str(questionindex)+""",
     quiz_id: midterm.id,
     question_id: question"""+str(questionindex)+""".id
 )
