@@ -1,3 +1,9 @@
+1805 = Course.create(
+    title: 'Discrete Structures I',
+    code: 'COMP 1805',
+    description: 'Introduction to discrete mathematics and discrete structures. Topics include: propositional logic, predicate calculus, set theory, complexity of algorithms, mathematical reasoning and proof techniques, recurrences, induction, finite automata and graph theory. Material is illustrated through examples from computing.'
+)
+
 2804 = Course.create(
     title: 'Discrete Structures II',
     code: 'COMP 2804',
