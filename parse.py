@@ -38,6 +38,7 @@ question"""+str(questionindex)+"""text = %q{
 
 question"""+str(questionindex)+""" = Question.create(
     title: "question"""+str(questionindex)+"""",
+    shuffle: false,
     body: question"""+str(questionindex)+"""text,
     render: 'mathjax'
 )
@@ -56,6 +57,7 @@ answer"""+str(questionindex)+str(answerindex)+""" = Answer.create(
 
 QuestionAnswer.create(
     correct: false,
+    disabled: false,
     answer_id: answer"""+str(questionindex)+str(answerindex)+""".id,
     question_id: question"""+str(questionindex)+""".id
 )
@@ -66,6 +68,7 @@ QuestionAnswer.create(
       quizjoin = """
 QuizQuestion.create(
     index: """+str(questionindex)+""",
+    disabled: false,
     quiz_id: midterm.id,
     question_id: question"""+str(questionindex)+""".id
 )
